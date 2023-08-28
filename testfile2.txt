@@ -1,0 +1,6 @@
+hi this is testfile2.
+in this file we mention a value and 
+print this value 
+
+
+MCU_VERSION=1.0.0
