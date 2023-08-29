@@ -21,7 +21,7 @@ if ["${act_for_ser}" == "stop" ]
 then
   if [ "${status}" == "active" ]
   then
-    echo "Please wait service is starting"
+    echo "Please wait service is stoping"
     systemctl stop ${ser_name}
   else
     echo "service: ${act_for_ser} is alreday in stoped state"
