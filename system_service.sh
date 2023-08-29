@@ -3,8 +3,17 @@
 read -p "Enter service name: " ser_name
 read -p "Enter action to the service(start/stop/restart/status): " act_for_ser
 
+check_act="startstoprestartstatus"
+valid_invalid=`echo "${check_act}" | grep ${act_for_ser} | wc -l`
+if [ ${valid_invalid} -eq 0 ]
+then
+  echo " Entered invalid action"
+  echo "Please select action in start/stop/restart/status"
+  exit
+fi
+
 echo -e "Service name is: ${ser_name} \n action is: ${act_for_ser}"
-status=` systemctl status httpd | grep -i active | awk '{ print $2 }'
+status=` systemctl status httpd | grep -i active | awk '{ print $2 }'`
 
 if [ "${act_for_ser}" == "start" ]
 then
