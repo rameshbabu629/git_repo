@@ -27,3 +27,14 @@ then
     echo "service: ${act_for_ser} is alreday in stoped state"
   fi
 fi
+
+if [ "${act_for_ser}" == "status" ]
+then
+  echo " The current status of ${ser_name} is ${satus} "
+fi
+
+if [ "${act_for_ser}" == "restart" ]
+then
+  echo "please wait restarting service ${ser_name}"
+  systemctl restart ${ser_name}
+fi
