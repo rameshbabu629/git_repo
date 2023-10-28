@@ -2,5 +2,6 @@ hi this is testfile2.
 in this file we mention a value and 
 print this value 
 
+and change the varibales, i just write here random
 
 MCU_VERSION=1.0.0
